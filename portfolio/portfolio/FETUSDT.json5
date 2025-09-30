@@ -1,0 +1,40 @@
+{
+  _base: {
+    weight: 1.0,
+    optimizer_weight_decay: 0.01,
+    chunk_size_lines: 32768,
+    file_pattern: "*_2025-*.parquet",
+    batch_size: 256,
+    seq_length: 512,
+    sequential_samples: 512,
+    exponential_factor: 1,
+    min_stride: 50,
+    max_stride: 200,
+    normalisation: 0,
+    adaptive_stats_db: "/workspace/Metadata/crypto_kline/db/fetusdt_rolling_20d.db",
+
+    // Normalization methods
+    price_norm_method: "standard",
+    volume_norm_method: "standard",
+    count_norm_method: "standard",
+    spread_norm_method: "none",
+    volume_imbalance_norm_method: "none",
+    time_norm_method: "cyclical",
+    window_norm_method: "context",
+    meta_norm_method: "none",
+
+    // Scale factors (all 1.0)
+    price_scale_factor: 1.0,
+    volume_scale_factor: 1.0,
+    count_scale_factor: 1.0,
+    spread_scale_factor: 1.0,
+    volume_imbalance_scale_factor: 1.0,
+    time_scale_factor: 1.0,
+    window_scale_factor: 1.0,
+    meta_scale_factor: 1.0,
+    other_scale_factor: 1.0
+  },
+  profiles: [
+    {name: "FETUSDT-30m-20d", exponential_lookback: 2048, predict_start: 29, predict_end: 31, train_folder: "/workspace/Metadata/crypto_train/crypto_FETUSDT"}
+  ]
+}

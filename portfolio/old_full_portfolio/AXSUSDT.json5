@@ -1,0 +1,44 @@
+{
+  _base: {
+    weight: 1.0,
+    optimizer_weight_decay: 0.01,
+    chunk_size_lines: 512,
+    file_pattern: "*.parquet",
+    batch_size: 256,
+    seq_length: 512,
+    sequential_samples: 512,
+    exponential_factor: 1,
+    min_stride: 10,
+    max_stride: 20,
+    normalisation: 0,
+    adaptive_stats_db: "/workspace/Metadata/crypto_kline/db/axsusdt_rolling_20d.db",
+
+    // Normalization methods
+    price_norm_method: "standard",
+    volume_norm_method: "standard",
+    count_norm_method: "standard",
+    spread_norm_method: "none",
+    volume_imbalance_norm_method: "none",
+    time_norm_method: "cyclical",
+    window_norm_method: "context",
+    meta_norm_method: "none",
+
+    // Scale factors (all 1.0)
+    price_scale_factor: 1.0,
+    volume_scale_factor: 1.0,
+    count_scale_factor: 1.0,
+    spread_scale_factor: 1.0,
+    volume_imbalance_scale_factor: 1.0,
+    time_scale_factor: 1.0,
+    window_scale_factor: 1.0,
+    meta_scale_factor: 1.0,
+    other_scale_factor: 1.0
+  },
+  profiles: [
+    {name: "AXSUSDT-10m-20d", exponential_lookback: 512, predict_start: 9, predict_end: 11, train_folder: "/workspace/Metadata/crypto_kline/minute_parquet/crypto_AXSUSDT"},
+    {name: "AXSUSDT-30m-20d", exponential_lookback: 512, predict_start: 29, predict_end: 31, train_folder: "/workspace/Metadata/crypto_kline/minute_parquet/crypto_AXSUSDT"},
+    {name: "AXSUSDT-60m-20d", exponential_lookback: 512, predict_start: 59, predict_end: 61, train_folder: "/workspace/Metadata/crypto_kline/minute_parquet/crypto_AXSUSDT"},
+    {name: "AXSUSDT-180m-20d", exponential_lookback: 512, predict_start: 179, predict_end: 181, train_folder: "/workspace/Metadata/crypto_kline/minute_parquet/crypto_AXSUSDT"},
+    {name: "AXSUSDT-360m-20d", exponential_lookback: 512, predict_start: 359, predict_end: 361, train_folder: "/workspace/Metadata/crypto_kline/minute_parquet/crypto_AXSUSDT"}
+  ]
+}

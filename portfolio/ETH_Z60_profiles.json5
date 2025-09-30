@@ -1,0 +1,330 @@
+[
+    {
+      "name": "ETH-60d-30m",
+      "weight": 1,
+      "optimizer_weight_decay": 0.01,
+      "train_folder": "/workspace/train_data/Maeve/ETH/seconds_raw/",
+      "file_pattern": "*.parquet",
+      "batch_size": 256,
+      "seq_length": 1024,
+      "sequential_samples": 0,
+      "exponential_factor": 1.2,
+      "min_stride": 5,
+      "max_stride": 10,
+      "exponential_lookback": 18000,
+      "predict_start": 1790,
+      "predict_end": 1800,
+      "adaptive_stats_db": "/workspace/Maeve/scaler_generator/eth_rolling_60d.db",
+      "price_norm_method": "standard",
+      "volume_norm_method": "standard",
+      "count_norm_method": "standard",
+      "spread_norm_method": "none",
+      "volume_imbalance_norm_method": "none",
+      "time_norm_method": "cyclical",
+      "window_norm_method": "context",
+      "meta_norm_method": "none",
+      "price_scale_factor": 1.0,
+      "volume_scale_factor": 1.0,
+      "count_scale_factor": 1.0,
+      "spread_scale_factor": 1.0,
+      "volume_imbalance_scale_factor": 1.0,
+      "time_scale_factor": 1.0,
+      "window_scale_factor": 1.0,
+      "meta_scale_factor": 1.0,
+      "other_scale_factor": 1.0,
+      "price_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "volume_clip_range": [
+        -30.0,
+        30.0
+      ],
+      "count_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "spread_clip_range": null,
+      "volume_imbalance_clip_range": null,
+      "time_clip_range": null,
+      "window_clip_range": [
+        -2.0,
+        30.0
+      ],
+      "meta_clip_range": null,
+      "other_clip_range": null,
+      "price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "volume_valid_range": [
+        0.0,
+        1000.0
+      ],
+      "count_valid_range": [
+        -1.0,
+        1000.0
+      ],
+      "spread_valid_range": null,
+      "volume_imbalance_valid_range": null,
+      "time_valid_range": null,
+      "window_valid_range": null,
+      "meta_valid_range": null,
+      "other_valid_range": null,
+      "mid_price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "anomaly_row_threshold": null,
+      "anomaly_column_threshold": null,
+      "price_placeholder_values": null,
+      "normalisation": 0.6,
+      "chunk_size_lines": 43200
+    },
+    {
+      "name": "ETH-60d-1h",
+      "weight": 1,
+      "optimizer_weight_decay": 0.01,
+      "train_folder": "/workspace/train_data/Maeve/ETH/seconds_raw/",
+      "file_pattern": "*.parquet",
+      "batch_size": 256,
+      "seq_length": 1024,
+      "sequential_samples": 0,
+      "exponential_factor": 1.2,
+      "min_stride": 5,
+      "max_stride": 10,
+      "exponential_lookback": 36000,
+      "predict_start": 3590,
+      "predict_end": 3600,
+      "adaptive_stats_db": "/workspace/Maeve/scaler_generator/eth_rolling_60d.db",
+      "price_norm_method": "standard",
+      "volume_norm_method": "standard",
+      "count_norm_method": "standard",
+      "spread_norm_method": "none",
+      "volume_imbalance_norm_method": "none",
+      "time_norm_method": "cyclical",
+      "window_norm_method": "context",
+      "meta_norm_method": "none",
+      "price_scale_factor": 1.0,
+      "volume_scale_factor": 1.0,
+      "count_scale_factor": 1.0,
+      "spread_scale_factor": 1.0,
+      "volume_imbalance_scale_factor": 1.0,
+      "time_scale_factor": 1.0,
+      "window_scale_factor": 1.0,
+      "meta_scale_factor": 1.0,
+      "other_scale_factor": 1.0,
+      "price_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "volume_clip_range": [
+        -30.0,
+        30.0
+      ],
+      "count_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "spread_clip_range": null,
+      "volume_imbalance_clip_range": null,
+      "time_clip_range": null,
+      "window_clip_range": [
+        -2.0,
+        30.0
+      ],
+      "meta_clip_range": null,
+      "other_clip_range": null,
+      "price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "volume_valid_range": [
+        0.0,
+        1000.0
+      ],
+      "count_valid_range": [
+        -1.0,
+        1000.0
+      ],
+      "spread_valid_range": null,
+      "volume_imbalance_valid_range": null,
+      "time_valid_range": null,
+      "window_valid_range": null,
+      "meta_valid_range": null,
+      "other_valid_range": null,
+      "mid_price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "anomaly_row_threshold": null,
+      "anomaly_column_threshold": null,
+      "price_placeholder_values": null,
+      "normalisation": 0.6,
+      "chunk_size_lines": 43200
+    },
+    {
+      "name": "ETH-60d-1.5h",
+      "weight": 1,
+      "optimizer_weight_decay": 0.01,
+      "train_folder": "/workspace/train_data/Maeve/ETH/seconds_raw/",
+      "file_pattern": "*.parquet",
+      "batch_size": 256,
+      "seq_length": 1024,
+      "sequential_samples": 0,
+      "exponential_factor": 1.2,
+      "min_stride": 5,
+      "max_stride": 10,
+      "exponential_lookback": 54000,
+      "predict_start": 5390,
+      "predict_end": 5400,
+      "adaptive_stats_db": "/workspace/Maeve/scaler_generator/eth_rolling_60d.db",
+      "price_norm_method": "standard",
+      "volume_norm_method": "standard",
+      "count_norm_method": "standard",
+      "spread_norm_method": "none",
+      "volume_imbalance_norm_method": "none",
+      "time_norm_method": "cyclical",
+      "window_norm_method": "context",
+      "meta_norm_method": "none",
+      "price_scale_factor": 1.0,
+      "volume_scale_factor": 1.0,
+      "count_scale_factor": 1.0,
+      "spread_scale_factor": 1.0,
+      "volume_imbalance_scale_factor": 1.0,
+      "time_scale_factor": 1.0,
+      "window_scale_factor": 1.0,
+      "meta_scale_factor": 1.0,
+      "other_scale_factor": 1.0,
+      "price_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "volume_clip_range": [
+        -30.0,
+        30.0
+      ],
+      "count_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "spread_clip_range": null,
+      "volume_imbalance_clip_range": null,
+      "time_clip_range": null,
+      "window_clip_range": [
+        -2.0,
+        30.0
+      ],
+      "meta_clip_range": null,
+      "other_clip_range": null,
+      "price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "volume_valid_range": [
+        0.0,
+        1000.0
+      ],
+      "count_valid_range": [
+        -1.0,
+        1000.0
+      ],
+      "spread_valid_range": null,
+      "volume_imbalance_valid_range": null,
+      "time_valid_range": null,
+      "window_valid_range": null,
+      "meta_valid_range": null,
+      "other_valid_range": null,
+      "mid_price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "anomaly_row_threshold": null,
+      "anomaly_column_threshold": null,
+      "price_placeholder_values": null,
+      "normalisation": 0.6,
+      "chunk_size_lines": 43200
+    },
+    {
+      "name": "ETH-60d-2h",
+      "weight": 1,
+      "optimizer_weight_decay": 0.01,
+      "train_folder": "/workspace/train_data/Maeve/ETH/seconds_raw/",
+      "file_pattern": "*.parquet",
+      "batch_size": 256,
+      "seq_length": 1024,
+      "sequential_samples": 0,
+      "exponential_factor": 1.2,
+      "min_stride": 5,
+      "max_stride": 10,
+      "exponential_lookback": 72000,
+      "predict_start": 7190,
+      "predict_end": 7200,
+      "adaptive_stats_db": "/workspace/Maeve/scaler_generator/eth_rolling_60d.db",
+      "price_norm_method": "standard",
+      "volume_norm_method": "standard",
+      "count_norm_method": "standard",
+      "spread_norm_method": "none",
+      "volume_imbalance_norm_method": "none",
+      "time_norm_method": "cyclical",
+      "window_norm_method": "context",
+      "meta_norm_method": "none",
+      "price_scale_factor": 1.0,
+      "volume_scale_factor": 1.0,
+      "count_scale_factor": 1.0,
+      "spread_scale_factor": 1.0,
+      "volume_imbalance_scale_factor": 1.0,
+      "time_scale_factor": 1.0,
+      "window_scale_factor": 1.0,
+      "meta_scale_factor": 1.0,
+      "other_scale_factor": 1.0,
+      "price_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "volume_clip_range": [
+        -30.0,
+        30.0
+      ],
+      "count_clip_range": [
+        -3.0,
+        3.0
+      ],
+      "spread_clip_range": null,
+      "volume_imbalance_clip_range": null,
+      "time_clip_range": null,
+      "window_clip_range": [
+        -2.0,
+        30.0
+      ],
+      "meta_clip_range": null,
+      "other_clip_range": null,
+      "price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "volume_valid_range": [
+        0.0,
+        1000.0
+      ],
+      "count_valid_range": [
+        -1.0,
+        1000.0
+      ],
+      "spread_valid_range": null,
+      "volume_imbalance_valid_range": null,
+      "time_valid_range": null,
+      "window_valid_range": null,
+      "meta_valid_range": null,
+      "other_valid_range": null,
+      "mid_price_valid_range": [
+        2500.0,
+        150000.0
+      ],
+      "anomaly_row_threshold": null,
+      "anomaly_column_threshold": null,
+      "price_placeholder_values": null,
+      "normalisation": 0.6,
+      "chunk_size_lines": 43200
+    }
+]
